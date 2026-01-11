@@ -1,15 +1,16 @@
+import { Outlet } from 'react-router';
+import ScrollToTop from '../../helpers/ScrollToTop';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-const Layout = ({ children }: LayoutProps) => {
+const Layout = () => {
   return (
     <>
+      <ScrollToTop />
       <Header />
-      <main className='min-h-screen'>{children}</main>
+      <main className='min-h-screen px-34'>
+        <Outlet />
+      </main>
       <Footer />
     </>
   );
