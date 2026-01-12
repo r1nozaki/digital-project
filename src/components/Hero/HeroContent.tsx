@@ -11,7 +11,7 @@ const HeroContent = () => {
         <img src={HeroImg} alt='Project image' />
         <Button
           text={'View project'}
-          className='absolute bottom-0 left-0 uppercase transition-colors duration-300 bg-white hover:cursor-pointer hover:border-black hover:bg-black hover:text-white'
+          className='absolute bottom-0 left-0 uppercase transition-colors duration-300 bg-white hover:border-black hover:bg-black hover:text-white'
           link={'/project'}
         />
       </div>

@@ -36,7 +36,7 @@ const FooterTop = () => {
           {contacts.map(({ content, icon }) => {
             const Icon = icon;
             return (
-              <div className='flex items-center gap-1'>
+              <div key={content} className='flex items-center gap-1'>
                 <Icon size={20} />
                 <span>{content}</span>
               </div>
