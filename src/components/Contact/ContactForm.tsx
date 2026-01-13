@@ -3,7 +3,8 @@ import { useForm, type SubmitHandler } from 'react-hook-form';
 import * as yup from 'yup';
 import Button from '../UI/Button';
 
-const phoneRegExp = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
+const phoneRegExp: RegExp =
+  /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
 
 const schema = yup.object({
   name: yup
@@ -34,6 +35,7 @@ const ContactForm = () => {
   } = useForm<FormData>({
     resolver: yupResolver(schema),
     mode: 'onBlur',
+    defaultValues: schema.getDefault(),
   });
   const onSubmit: SubmitHandler<FormData> = data => {
     console.log(data);
@@ -88,7 +90,7 @@ const ContactForm = () => {
         <input
           {...register('interestedIn')}
           className={`w-full h-11.5 bg-[#F3F3F3] placeholder:text-[#8D8D8D] text-sm py-4 pl-5 ${
-            errors.name ? 'border border-red-500' : ''
+            errors.interestedIn ? 'border border-red-500' : ''
           }`}
           placeholder='Interested In'
         />
@@ -103,7 +105,7 @@ const ContactForm = () => {
           rows={7}
           {...register('message')}
           className={`w-full bg-[#F3F3F3] placeholder:text-[#8D8D8D] text-sm py-4 pl-5 resize-none ${
-            errors.name ? 'border border-red-500' : ''
+            errors.message ? 'border border-red-500' : ''
           }`}
           placeholder='Message'
         />
