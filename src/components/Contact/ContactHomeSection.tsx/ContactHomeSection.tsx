@@ -8,7 +8,9 @@ const ContactHomeSection = () => {
         Contact Us
       </h2>
       <div className='flex gap-7.5 items-center'>
-        <ContactForm />
+        <div className='w-150'>
+          <ContactForm />
+        </div>
         <ContactHomeContent />
       </div>
     </section>

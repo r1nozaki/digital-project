@@ -15,7 +15,7 @@ const HeaderNavigation = () => {
         <NavLink key={label} to={path}>
           {({ isActive }) => (
             <span
-              className={`text-base border-black font-medium py-1 uppercase ${
+              className={`text-base border-black font-medium py-1 uppercase text-[#333333] ${
                 isActive ? 'border-y ' : 'hover:border-y'
               }`}
             >

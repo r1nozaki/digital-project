@@ -1,4 +1,5 @@
 import { yupResolver } from '@hookform/resolvers/yup';
+import { type Dispatch, type SetStateAction } from 'react';
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import * as yup from 'yup';
 import Button from '../UI/Button';
@@ -24,9 +25,13 @@ const schema = yup.object({
   message: yup.string().required('This field is required'),
 });
 
+interface ContactFormProps {
+  setIsSended: Dispatch<SetStateAction<boolean>>;
+}
+
 type FormData = yup.InferType<typeof schema>;
 
-const ContactForm = () => {
+const ContactForm = ({ setIsSended }: ContactFormProps) => {
   const {
     register,
     handleSubmit,
@@ -40,10 +45,11 @@ const ContactForm = () => {
   const onSubmit: SubmitHandler<FormData> = data => {
     console.log(data);
     reset();
+    setIsSended(true);
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='w-150 h-93'>
+    <form onSubmit={handleSubmit(onSubmit)} className='w-full '>
       <div className='w-full'>
         <input
           {...register('name')}
@@ -117,7 +123,7 @@ const ContactForm = () => {
       </div>
       <Button
         type='submit'
-        text='Send Email'
+        text='Send'
         className='uppercase bg-[#333333] text-white transition-colors duration-300 border-[#333333] hover:border-2 hover:bg-transparent hover:text-black mt-5'
       />
     </form>

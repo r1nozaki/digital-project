@@ -5,7 +5,7 @@ const HeroContent = () => {
     <div className='flex items-center justify-between w-full'>
       <div className='flex flex-col'>
         <span className='font-light text-[64px] text-[#BDBDBD]'>Project</span>
-        <span className='font-bold text-[64px] -mt-6'>AXIS</span>
+        <span className='font-bold text-[64px] -mt-6 text-[#333333]'>AXIS</span>
       </div>
       <div className='relative'>
         <img src={HeroImg} alt='Project image' />
