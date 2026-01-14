@@ -4,8 +4,7 @@ import { useForm, type SubmitHandler } from 'react-hook-form';
 import * as yup from 'yup';
 import Button from '../UI/Button';
 
-const phoneRegExp: RegExp =
-  /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
+const phoneRegExp = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
 
 const schema = yup.object({
   name: yup
@@ -26,7 +25,7 @@ const schema = yup.object({
 });
 
 interface ContactFormProps {
-  setIsSended: Dispatch<SetStateAction<boolean>>;
+  setIsSended?: Dispatch<SetStateAction<boolean>>;
 }
 
 type FormData = yup.InferType<typeof schema>;
@@ -45,7 +44,7 @@ const ContactForm = ({ setIsSended }: ContactFormProps) => {
   const onSubmit: SubmitHandler<FormData> = data => {
     console.log(data);
     reset();
-    setIsSended(true);
+    setIsSended?.(true);
   };
 
   return (

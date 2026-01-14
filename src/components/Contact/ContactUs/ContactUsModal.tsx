@@ -12,7 +12,7 @@ const ContactUsModal = ({
   isOpenModal,
   setIsOpenModal,
 }: ContactUsModalProps) => {
-  const [isSended, setIsSended] = useState<boolean>(false);
+  const [isSended, setIsSended] = useState(false);
 
   if (!isOpenModal) return null;
 
