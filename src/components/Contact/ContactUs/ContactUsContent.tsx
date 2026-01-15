@@ -1,9 +1,13 @@
 import Button from '@/components/UI/Button';
+import useBlockScroll from '@/hooks/useBlockScroll';
+import { lenis } from '@/lenisInstance';
 import { useState } from 'react';
 import ContactUsModal from './ContactUsModal';
 
 const ContactUsContent = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
+
+  useBlockScroll(isOpenModal, lenis);
 
   const handleModal = () => {
     setIsOpenModal(!isOpenModal);

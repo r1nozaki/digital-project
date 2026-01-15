@@ -11,6 +11,7 @@ export const ROUTER_PATHS = {
 const LayoutWrapper = lazy(() => import('../components/layout/Layout'));
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const GalleryPage = lazy(() => import('../pages/Gallery/GalleryPage'));
+const ProjectsPage = lazy(() => import('../pages/ProjectsPage/ProjectsPage'));
 const ContactPage = lazy(() => import('../pages/ContactUsPage/ContactUsPage'));
 const Page404 = lazy(() => import('../pages/404/Page404'));
 
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: ROUTER_PATHS.GALLERY, element: <GalleryPage /> },
+      { path: ROUTER_PATHS.PROJECTS, element: <ProjectsPage /> },
       { path: ROUTER_PATHS.CONTACTS, element: <ContactPage /> },
       {
         path: '*',

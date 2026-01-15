@@ -48,7 +48,7 @@ const ContactForm = ({ setIsSended }: ContactFormProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='w-full '>
+    <form onSubmit={handleSubmit(onSubmit)} className='w-full z-20'>
       <div className='w-full'>
         <input
           {...register('name')}

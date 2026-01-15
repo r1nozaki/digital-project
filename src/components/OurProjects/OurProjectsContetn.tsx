@@ -1,4 +1,5 @@
 import { MoveRight } from 'lucide-react';
+import { useNavigate } from 'react-router';
 import Project1 from '../../assets/Project1.png';
 import Project2 from '../../assets/Project2.png';
 import Project3 from '../../assets/Project3.png';
@@ -7,9 +8,14 @@ import Project5 from '../../assets/Project5.png';
 import Button from '../UI/Button';
 
 const OurProjectsContetn = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className='w-full grid grid-cols-1 md:grid-cols-12 gap-4 relative '>
-      <div className='col-span-1 md:col-span-6 relative  h-64 md:h-80'>
+    <div className='w-full grid grid-cols-1 md:grid-cols-12 gap-4 relative'>
+      <div
+        className='col-span-1 md:col-span-6 relative  h-64 md:h-80'
+        onClick={() => navigate('/projects')}
+      >
         <img
           src={Project1}
           alt='Sample Project'
@@ -54,7 +60,7 @@ const OurProjectsContetn = () => {
       </div>
       <Button
         text={'All Projects'}
-        link={'projects'}
+        link={'/projects'}
         className='uppercase bg-[#333333] text-white transition-colors duration-300 border-[#333333] hover:border-2 hover:bg-transparent hover:text-black col-span-1 md:col-span-12 justify-self-end'
       />
     </div>
