@@ -17,7 +17,7 @@ const ProjectCard = ({ id, preview, title, summary }: ProjectCardProps) => {
         <p>{summary}</p>
         <Button
           text={'View more'}
-          link='/'
+          link={`/projects/${id}`}
           className='uppercase transition-colors duration-300 bg-white hover:border-black hover:bg-black hover:text-white'
         />
       </div>
