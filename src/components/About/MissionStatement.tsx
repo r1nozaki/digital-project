@@ -8,16 +8,19 @@ const MissionStatement = () => {
         <div className='flex gap-7.5 items-center w-full'>
           <span className='font-black text-[200px] text-[#BDBDBD]'>1</span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur, lectus et facilisis placerat.
+            We strive to create unique and functional architectural solutions
+            that blend seamlessly with the environment. Our goal is to design
+            spaces that inspire, endure, and stand the test of time while
+            meeting the highest standards of quality.
           </p>
         </div>
         <div className='flex gap-7.5 items-center w-full'>
           <span className='font-black text-[200px] text-[#BDBDBD]'>2</span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur, lectus et facilisis placerat, magna mauris porttitor
-            tortor, a auctor est felis ut nisl.
+            We are committed to sustainable building practices and innovative
+            design. Every project is approached with a focus on precision,
+            artistic vision, and a deep understanding of our clients' needs to
+            bring their ideas to reality.
           </p>
         </div>
       </div>

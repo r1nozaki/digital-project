@@ -6,6 +6,7 @@ export const ROUTER_PATHS = {
   GALLERY: '/gallery',
   PROJECTS: '/projects',
   CONTACTS: '/contacts',
+  PROJECTS_DETAIL: '/projects/:id',
 };
 
 const LayoutWrapper = lazy(() => import('../components/layout/Layout'));
@@ -13,6 +14,9 @@ const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const GalleryPage = lazy(() => import('../pages/Gallery/GalleryPage'));
 const ProjectsPage = lazy(() => import('../pages/ProjectsPage/ProjectsPage'));
 const ContactPage = lazy(() => import('../pages/ContactUsPage/ContactUsPage'));
+const ProjectsDetailPage = lazy(
+  () => import('../pages/ProjectsPage/ProjectsDetail/ProjectsDetailPage'),
+);
 const Page404 = lazy(() => import('../pages/404/Page404'));
 
 export const router = createBrowserRouter([
@@ -23,6 +27,7 @@ export const router = createBrowserRouter([
       { path: ROUTER_PATHS.GALLERY, element: <GalleryPage /> },
       { path: ROUTER_PATHS.PROJECTS, element: <ProjectsPage /> },
       { path: ROUTER_PATHS.CONTACTS, element: <ContactPage /> },
+      { path: ROUTER_PATHS.PROJECTS_DETAIL, element: <ProjectsDetailPage /> },
       {
         path: '*',
         element: <Page404 />,
