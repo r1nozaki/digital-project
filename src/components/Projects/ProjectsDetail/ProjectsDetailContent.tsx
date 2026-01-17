@@ -8,7 +8,7 @@ const ProjectsDetailContent = () => {
 
   if (!project) {
     return (
-      <div className='flex justify-center items-center font-bold text-[#333333]'>
+      <div className='flex justify-center items-center font-bold text-[#333333] text-4xl'>
         Project not found!
       </div>
     );
