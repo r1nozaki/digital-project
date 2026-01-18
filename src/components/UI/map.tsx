@@ -397,7 +397,7 @@ function MarkerContent({ children, className }: MarkerContentProps) {
 
 function DefaultMarkerIcon() {
   return (
-    <div className='relative h-4 w-4 rounded-full border-2 border-white bg-blue-500 shadow-lg' />
+    <div className='relative w-4 h-4 bg-blue-500 border-2 border-white rounded-full shadow-lg' />
   );
 }
 
@@ -471,10 +471,10 @@ function MarkerPopup({
         <button
           type='button'
           onClick={handleClose}
-          className='absolute top-1 right-1 z-10 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
+          className='absolute z-10 transition-opacity rounded-sm top-1 right-1 opacity-70 ring-offset-background hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
           aria-label='Close popup'
         >
-          <X className='h-4 w-4' />
+          <X className='w-4 h-4' />
           <span className='sr-only'>Close</span>
         </button>
       )}
@@ -618,7 +618,7 @@ const positionClasses = {
 
 function ControlGroup({ children }: { children: React.ReactNode }) {
   return (
-    <div className='flex flex-col rounded-md border border-white/10 text-zinc-100 bg-zinc-900  shadow-sm overflow-hidden [&>button:not(:last-child)]:border-b [&>button:not(:last-child)]:border-white/10 '>
+    <div className='flex flex-col rounded-md border border-white/10 text-zinc-100 bg-zinc-900  shadow-sm overflow-hidden [&>button:not(:last-child)]:border-b [&>button:not(:last-child)]:border-white/10'>
       {children}
     </div>
   );
@@ -713,7 +713,7 @@ function MapControls({
   return (
     <div
       className={cn(
-        'absolute z-10 flex flex-col gap-1.5',
+        'absolute z-0 flex flex-col gap-1.5',
         positionClasses[position],
         className,
       )}
@@ -789,7 +789,7 @@ function CompassButton({ onClick }: { onClick: () => void }) {
       <svg
         ref={compassRef}
         viewBox='0 0 24 24'
-        className='size-5 transition-transform duration-200'
+        className='transition-transform duration-200 size-5'
         style={{ transformStyle: 'preserve-3d' }}
       >
         <path d='M12 2L16 12H12V2Z' className='fill-red-500' />
@@ -895,10 +895,10 @@ function MapPopup({
         <button
           type='button'
           onClick={handleClose}
-          className='absolute top-1 right-1 z-10 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
+          className='absolute z-10 transition-opacity rounded-sm top-1 right-1 opacity-70 ring-offset-background hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
           aria-label='Close popup'
         >
-          <X className='h-4 w-4' />
+          <X className='w-4 h-4' />
           <span className='sr-only'>Close</span>
         </button>
       )}

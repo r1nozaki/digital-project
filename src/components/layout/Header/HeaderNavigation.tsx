@@ -12,7 +12,7 @@ const HeaderNavigation = () => {
   return (
     <>
       {navItems.map(({ path, label }) => (
-        <NavLink key={label} to={path}>
+        <NavLink to={path}>
           {({ isActive }) => (
             <span
               className={`text-base border-black font-medium py-1 uppercase text-[#333333] ${

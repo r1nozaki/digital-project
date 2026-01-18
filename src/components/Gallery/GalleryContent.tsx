@@ -11,7 +11,7 @@ const GalleryContent = () => {
 
   return (
     <div className='w-full'>
-      <h1 className='font-roboto text-[64px] font-bold w-69.5 leading-16 text-[#333333]'>
+      <h1 className='font-roboto text-3xl text-center md:text-left w-full md:text-[64px] font-bold md:w-69.5 leading-16 text-[#333333]'>
         <span className='font-light text-[#BDBDBD]'>Photo </span>
         Gallery
       </h1>
@@ -27,7 +27,7 @@ const GalleryContent = () => {
           </div>
         ))}
       </div>
-      <div className='mt-18 flex items-center gap-7.5'>
+      <div className='mt-18 flex justify-center md:justify-start items-center gap-7.5'>
         <div className='text-2xl font-roboto text-[#333333] flex items-center gap-2'>
           <span className='font-bold'>{formatNumber(currentPage)}</span>
           <span className='text-[#BDBDBD] text-4xl font-light'>/</span>

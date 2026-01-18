@@ -11,51 +11,51 @@ const OurProjectsContetn = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='w-full grid grid-cols-1 md:grid-cols-12 gap-4 relative'>
+    <div className='relative grid w-full grid-cols-1 gap-4 md:grid-cols-12'>
       <div
-        className='col-span-1 md:col-span-6 relative  h-64 md:h-80'
+        className='relative h-64 col-span-1 md:col-span-6 md:h-80'
         onClick={() => navigate('/projects')}
       >
         <img
           src={Project1}
           alt='Sample Project'
-          className='w-full h-full object-cover'
+          className='object-cover w-full h-full'
         />
         <div className='bg-[#333333]  opacity-80 w-full h-full inset-0 absolute cursor-pointer transition-opacity duration-300 hover:opacity-40 '>
-          <span className=' text-white font-bold font-roboto text-[64px] absolute top-15 left-20 w-58 leading-16 z-1'>
+          <span className=' text-white font-bold font-roboto md:text-[64px] text-3xl absolute top-23 md:top-15 left-20 w-58 leading-16 z-1'>
             Sample Project
           </span>
-          <span className='text-white text-lg absolute bottom-20 left-20 flex items-center gap-5 uppercase font-gothicA1 z-1'>
-            View More <MoveRight />{' '}
+          <span className='absolute flex items-center gap-3 text-base text-white uppercase md:gap-5 md:text-lg bottom-20 left-20 font-gothicA1 z-1'>
+            View More <MoveRight />
           </span>
         </div>
       </div>
 
-      <div className='col-span-1 md:col-span-6 h-64 md:h-80'>
-        <img src={Project2} alt='Dome' className='w-full h-full object-cover' />
+      <div className='h-64 col-span-1 md:col-span-6 md:h-80'>
+        <img src={Project2} alt='Dome' className='object-cover w-full h-full' />
       </div>
 
-      <div className='col-span-1 md:col-span-3 h-48 md:h-60'>
+      <div className='h-48 col-span-1 md:col-span-3 md:h-60'>
         <img
           src={Project3}
           alt='Court'
-          className='w-full h-full object-cover'
+          className='object-cover w-full h-full'
         />
       </div>
 
-      <div className='col-span-1 md:col-span-5 h-48 md:h-60'>
+      <div className='h-48 col-span-1 md:col-span-5 md:h-60'>
         <img
           src={Project4}
           alt='Buildings'
-          className='w-full h-full object-cover'
+          className='object-cover w-full h-full'
         />
       </div>
 
-      <div className='col-span-1 md:col-span-4 h-48 md:h-60'>
+      <div className='h-48 col-span-1 md:col-span-4 md:h-60'>
         <img
           src={Project5}
           alt='Abstract'
-          className='w-full h-full object-cover'
+          className='object-cover w-full h-full'
         />
       </div>
       <Button

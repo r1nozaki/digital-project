@@ -1,11 +1,43 @@
+import { Menu, X } from 'lucide-react';
+import { AnimatePresence, motion } from 'motion/react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router';
 import Logo from '../../common/Logo';
 import HeaderNavigation from './HeaderNavigation';
 
 const Header = () => {
+  const location = useLocation();
+  const [isOpenBurger, setIsOpenBurger] = useState(false);
+
+  useEffect(() => {
+    setIsOpenBurger(false);
+  }, [location.pathname]);
+
   return (
-    <header className='flex items-center justify-between py-8 px-34 font-roboto'>
+    <header className='relative flex items-center justify-between w-full p-4 md:py-8 sm:px-18 md:px-20 lg:px-34 font-roboto'>
       <Logo color='black' />
-      <nav>
+      <button
+        className='flex items-center justify-center w-10 h-10 md:hidden'
+        onClick={() => setIsOpenBurger(!isOpenBurger)}
+      >
+        {isOpenBurger ? <X /> : <Menu />}
+      </button>
+      <AnimatePresence>
+        {isOpenBurger && (
+          <motion.nav
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className='absolute left-0 z-40 w-full top-full'
+          >
+            <ul className='flex flex-col items-center gap-5 p-4 bg-white shadow-lg md:hidden'>
+              <HeaderNavigation />
+            </ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
+      <nav className='hidden md:flex'>
         <ul className='flex items-center gap-15'>
           <HeaderNavigation />
         </ul>

@@ -31,7 +31,7 @@ const locations: Location[] = [
 
 const ContactUsMap = () => {
   return (
-    <div className='h-100 w-full' data-lenis-prevent>
+    <div className='w-full h-100' data-lenis-prevent>
       <Map center={[-97.7458661, 30.2661331]} zoom={12}>
         <MapControls
           position='bottom-right'
@@ -47,7 +47,7 @@ const ContactUsMap = () => {
             latitude={location.lat}
           >
             <MarkerContent>
-              <div className='size-4 rounded-full bg-primary border-2 border-white shadow-lg' />
+              <div className='border-2 border-white rounded-full shadow-lg size-4 bg-primary' />
             </MarkerContent>
             <MarkerTooltip>{location.name}</MarkerTooltip>
             <MarkerPopup>

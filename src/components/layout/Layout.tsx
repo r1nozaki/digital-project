@@ -11,7 +11,7 @@ const Layout = () => {
       <ScrollProgres />
       <Header />
 
-      <main className='min-h-screen px-34'>
+      <main className='min-h-screen px-5 md:px-34'>
         <Outlet />
       </main>
 

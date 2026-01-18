@@ -20,10 +20,10 @@ const FooterTop = () => {
   ];
 
   return (
-    <div className='flex justify-between py-15 pl-29 pr-53'>
+    <div className='flex flex-col md:flex-row items-center md:items-start justify-between gap-5 py-10 md:py-15 md:pl-29 md:pr-53'>
       <Logo color='white' />
-      <div className='flex gap-39.5 items-center'>
-        <div className='flex flex-col gap-2 text-white'>
+      <div className='flex flex-col md:flex-row gap-5 md:gap-39.5 items-center'>
+        <div className='flex flex-col items-center md:items-start gap-2 text-white'>
           <span className='text-lg font-bold'>Information</span>
           {information.map(l => (
             <Link key={l.label} to={l.path} className='hover:underline'>
@@ -31,7 +31,7 @@ const FooterTop = () => {
             </Link>
           ))}
         </div>
-        <div className='flex flex-col gap-5 text-white'>
+        <div className='flex flex-col justify-center items-center gap-2 md:gap-5 text-white'>
           <span className='text-lg font-bold'>Contacts</span>
           {contacts.map(({ content, icon }) => {
             const Icon = icon;

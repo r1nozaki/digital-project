@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { lenis } from '@/lenisInstance';
+import { useEffect, useState } from 'react';
 
 interface UsePaginationReturn<T> {
   next: () => void;
@@ -13,7 +14,6 @@ const usePagination = <T>(
   itemsPerPage: number,
 ): UsePaginationReturn<T> => {
   const [currentPage, setCurrentPage] = useState(1);
-
   const maxPage = Math.ceil(data.length / itemsPerPage) || 1;
 
   const currentData = (): T[] => {
@@ -23,12 +23,16 @@ const usePagination = <T>(
   };
 
   const next = () => {
-    setCurrentPage(currentPage => Math.min(currentPage + 1, maxPage));
+    setCurrentPage(curr => Math.min(curr + 1, maxPage));
   };
 
   const prev = () => {
-    setCurrentPage(currentPage => Math.max(currentPage - 1, 1));
+    setCurrentPage(curr => Math.max(curr - 1, 1));
   };
+
+  useEffect(() => {
+    lenis.scrollTo(140);
+  }, [currentPage]);
 
   return {
     next,

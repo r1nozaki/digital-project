@@ -29,7 +29,7 @@ const Button = ({
   return (
     <button
       type='button'
-      className={`w-55.5 h-16 flex items-center justify-center gap-2 cursor-pointer ${className}`}
+      className={`md:w-55.5 md:h-16 w-45 h-12 flex items-center justify-center gap-2 cursor-pointer text-sm md:text-base ${className}`}
       onClick={handleClick}
       {...rest}
     >

@@ -3,18 +3,20 @@ import Button from '../UI/Button';
 
 const HeroContent = () => {
   return (
-    <div className='flex items-center gap-30 w-full'>
-      <div className='flex flex-col w-1/3'>
-        <span className='font-light text-[64px] text-[#BDBDBD]'>Project</span>
-        <span className='font-bold text-[64px] -mt-6 text-[#333333]'>
+    <div className='flex flex-col items-center w-full gap-10 md:flex-row md:gap-30'>
+      <div className='flex flex-col w-1/3 text-center md:leading-16 md:text-left'>
+        <span className='font-light md:text-[64px] text-[#BDBDBD] text-3xl'>
+          Project
+        </span>
+        <span className='font-bold md:text-[64px]  text-[#333333] text-3xl'>
           Colosseum
         </span>
       </div>
-      <div className='relative w-2/3'>
+      <div className='relative w-full'>
         <img
           src={preview3}
           alt='Project image'
-          className='w-full h-full object-cover'
+          className='object-cover w-full h-full'
         />
         <Button
           text={'View project'}
