@@ -1,13 +1,13 @@
-import AboutContent from './AboutContent';
-import MissionStatement from './MissionStatement';
+import AboutContent from './AboutContent'
+import MissionStatement from './MissionStatement'
 
 const AboutSection = () => {
-  return (
-    <section className='pt-6 pb-30'>
-      <AboutContent />
-      <MissionStatement />
-    </section>
-  );
-};
+	return (
+		<section className='pt-6 pb-30'>
+			<AboutContent />
+			<MissionStatement />
+		</section>
+	)
+}
 
-export default AboutSection;
+export default AboutSection

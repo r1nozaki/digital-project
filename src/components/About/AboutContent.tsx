@@ -17,11 +17,11 @@ const AboutContent = () => {
 					className='md:absolute top-74 '
 				/>
 			</div>
-			<div className='flex flex-col-reverse md:flex-row md:gap-7.5'>
+			<div className='flex flex-col-reverse md:items-start items-center md:flex-row md:gap-7.5'>
 				<Image
 					src={MainAbout}
 					alt='Main building in about section'
-					className='pt-7.5'
+					className='pt-7.5 w-67.5 h-86.25'
 				/>
 				<div className='font-roboto'>
 					<h1 className='font-light md:text-[64px] text-3xl text-center md:text-left text-[#BDBDBD]'>

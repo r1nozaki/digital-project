@@ -18,6 +18,7 @@ const HeroContent = () => {
 					src={preview3}
 					alt='Project image'
 					className='object-cover w-full h-full'
+					priority
 				/>
 				<Button
 					text={'View project'}
