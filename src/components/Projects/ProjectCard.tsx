@@ -1,4 +1,4 @@
-import { ProjectItem } from '@/src/types/Projects'
+import type { ProjectItem } from '@/src/types/Projects'
 import Button from '../UI/Button'
 import Image from 'next/image'
 
