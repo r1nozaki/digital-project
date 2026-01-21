@@ -1,9 +1,11 @@
+import type { StaticImageData } from 'next/image'
+
 export interface ProjectItem {
-  id: string;
-  title: string;
-  preview: string;
-  mainImage: string;
-  additionalImage: string;
-  description: string;
-  summary: string;
+	id: string
+	title: string
+	preview: StaticImageData
+	mainImage: StaticImageData
+	additionalImage: StaticImageData
+	description: string
+	summary: string
 }

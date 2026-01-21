@@ -16,7 +16,7 @@ const ScrollToTopBtn = () => {
 	}, [])
 
 	const ScrollToTop = () => {
-		lenis.scrollTo(0)
+		lenis?.scrollTo(0)
 	}
 
 	if (!visible) return null

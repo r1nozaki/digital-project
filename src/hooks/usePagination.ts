@@ -33,7 +33,7 @@ const usePagination = <T>(
 	}
 
 	useEffect(() => {
-		lenis.scrollTo(140)
+		lenis?.scrollTo(140)
 	}, [currentPage])
 
 	return {
