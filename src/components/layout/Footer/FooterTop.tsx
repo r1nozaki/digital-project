@@ -1,0 +1,62 @@
+import { Mail, MapPin, Phone } from 'lucide-react'
+import Link from 'next/link'
+import { type ContactItem } from '../../../types/Contacts'
+import { type NavigationItem } from '../../../types/Navigation'
+import Logo from '../../common/Logo'
+import Socials from '../../common/Socials'
+
+const FooterTop = () => {
+	const information: NavigationItem[] = [
+		{ path: '/', label: 'Home' },
+		{ path: '/gallery', label: 'Gallery' },
+		{ path: '/projects', label: 'Projects' },
+		{ path: '/contact-us', label: 'Contacts' }
+	]
+
+	const contacts: ContactItem[] = [
+		{ content: '1234 Sample Street Austin Texas 78704', icon: MapPin },
+		{ content: '512.333.2222', icon: Phone },
+		{ content: 'sampleemail@gmail.com', icon: Mail }
+	]
+
+	return (
+		<div className='flex flex-col md:flex-row items-center md:items-start justify-between gap-5 py-10 md:py-15 md:pl-29 md:pr-53'>
+			<Logo color='white' />
+			<div className='flex flex-col md:flex-row gap-5 md:gap-39.5 items-center'>
+				<div className='flex flex-col items-center md:items-start gap-2 text-white'>
+					<span className='text-lg font-bold'>Information</span>
+					{information.map(l => (
+						<Link
+							key={l.label}
+							href={l.path}
+							className='hover:underline'
+						>
+							{l.label}
+						</Link>
+					))}
+				</div>
+				<div className='flex flex-col justify-center items-center md:items-start gap-2 md:gap-5 text-white'>
+					<span className='text-lg font-bold'>Contacts</span>
+					{contacts.map(({ content, icon }) => {
+						const Icon = icon
+						return (
+							<div
+								key={content}
+								className='flex items-center gap-1'
+							>
+								<Icon size={20} />
+								<span>{content}</span>
+							</div>
+						)
+					})}
+				</div>
+			</div>
+			<div className='text-white'>
+				<span className='block mb-6 text-lg font-bold'>Social Media</span>
+				<Socials />
+			</div>
+		</div>
+	)
+}
+
+export default FooterTop
